@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Accordion Component</title>
+    <style>
+      /* Main Color : #087f5b
+      Grey Color : #343a40 */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        line-height: 1;
+      }
+
+      .accordion {
+        width: 700px;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      u .accordion1,
+      .accordion2,
+      .accordion3 {
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+        padding: 24px;
+      }
+
+      .accordion2 {
+        border-top: 4px solid #087f5b;
+      }
+
+      .item {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        column-gap: 24px;
+        row-gap: 32px;
+      }
+
+      .number,
+      .question {
+        font-size: 24px;
+        font-weight: 500;
+        /*color: #087f5b;*/
+      }
+
+      .number {
+        color: #adb5bd;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+      }
+      .hidden-box {
+        grid-column: 2;
+        display: none;
+      }
+
+      .hidden-box p {
+        line-height: 1.5;
+        margin-bottom: 24px;
+      }
+
+      .hidden-box ul {
+        color: #868e96;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .open .hidden-box {
+        display: block;
+      }
+
+      .open .number,
+      .open .question {
+        color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="accordion1">
+        <div class="item">
+          <p class="number">01</p>
+          <p class="question">Where are these chairs assembled?</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="accordion2">
+        <div class="item open">
+          <p class="number">02</p>
+          <p class="question">How long do I have to return my chair?</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+          <div class="hidden-box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+              nihil recusandae nesciunt odit iure dolor inventore ratione
+              perspiciatis! Necessitatibus sed perferendis blanditiis eveniet
+              aspernatur officia quisquam. Veniam quasi rem recusandae!
+            </p>
+            <ul>
+              <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit</li>
+              <li>Quo magnam ex quisquam rem dolorem soluta atnon</li>
+              <li>eius itaque recusandae voluptatibus iste</li>
+              <li>voluptates sapiente numquam perferendis, sit libero</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion3">
+        <div class="item">
+          <p class="number">03</p>
+          <p class="question">Do you ship to countries outside the EU?</p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
